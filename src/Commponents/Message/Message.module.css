@@ -1,0 +1,37 @@
+.message {
+    margin: 0 auto;
+    background: white;
+    border-radius:15px;
+    height:85px;
+    width:500px;
+    padding:20px;
+    position:relative;
+    width: 350px;
+    height: 250px;
+    border: 5px solid black;
+
+}
+
+
+.message:after {
+    content: '';
+    border: 130px solid ;
+    border-image: url("https://i.gifer.com/origin/16/16171a5109f430fc17a613b809cd75c2_w200.gif");
+    border-right: 0;
+    border-top: 0;
+    top: 30%;
+    right: 430px;
+    position: absolute;
+   
+}
+
+
+.time {
+    text-align: right;
+}
+
+.message h6  {
+    margin: 0;
+    padding: 0;
+
+}
