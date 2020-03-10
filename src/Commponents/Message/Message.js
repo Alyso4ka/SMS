@@ -14,6 +14,7 @@ const Message = () => {
                 18:31 PM
             </div>
                 </div>
+
             )
             };
                 export default Message;
