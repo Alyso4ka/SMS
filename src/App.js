@@ -1,20 +1,16 @@
 import React from 'react';
-import Name from "./Commponents/Name/Name";
+import styles from "./Container.module.css";
 import Message from "./Commponents/Message/Message";
+import MyName from "./Commponents/Name/MyName";
 
-
-
- const App = () => {
+const App = () => {
     return (
         <div className="App">
-
-            <Name/>
-            <Message/>
-
+            <div className={styles.container}>
+                <MyName/>
+                <Message/>
+            </div>
         </div>
     );
- };
-
-
-
+};
 export default App;

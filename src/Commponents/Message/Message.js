@@ -1,23 +1,19 @@
-import React from "react";
-import s from "./Message.module.css";
-import Name from "../Name/Name";
+import React from 'react';
+import styles from './Message.module.css';
+
+
 
 const Message = () => {
-    return (
-        <div className={s.message}>
-            <h2>Zhenya Zinuk</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis dolore doloribus eius ex,
-            exercitationem incidunt iste, labore laudantium non, praesentium reiciendis sit. Aspernatur ipsum maiores
-            molestias porro rerum sapiente?
-
-            <div className={s.time}>
-                18:31 PM
+    return  (
+        <div className={styles.message}>
+            <h6>Zhenya Zinuk</h6>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio doloremque eius  facere laudantium nobis reprehenderit tempore. Ea, enim, recusandae!
+            <div className={styles.time}>
+                07:40 PM
             </div>
-                </div>
+        </div>
+    )
+};
 
-            )
-            };
-                export default Message;
-
-
+export default Message;
 
