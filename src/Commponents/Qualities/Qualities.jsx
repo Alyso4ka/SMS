@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Qualities.module.css';
 
 
-
 const Qualities = (props) => {
     let newQualities = [
         {title: "Коммунист", id: 1},
@@ -11,12 +10,16 @@ const Qualities = (props) => {
 
     ]
 
-    let qualitiesItem = newQualities.map(el => <li className={styles.lishka} key={el.id}>{el.title}</li>)
+    let qualitiesItem = newQualities.map((el, num) => {
+
+        if (num === 1)
+            return (<li className={styles.lishka} key={el.id}>{el.title}</li>)
+        else
+            return (<li key={el.id}>{el.title}</li>)
+    });
 
 
-
-
-    return  (
+    return (
         <div className={styles.qualities}>
 
             <ul>{qualitiesItem}</ul>
