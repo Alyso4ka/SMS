@@ -3,7 +3,8 @@ import styles from "./Container.module.css";
 import Message from "./Commponents/Message/Message";
 import MyName from "./Commponents/Name/MyName";
 import Qualities from "./Commponents/Qualities/Qualities";
-import Btn from "./Commponents/Btn/Btn";
+import Sib from "./Commponents/Sib/Sib";
+
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         <div className="App">
 
             <div className={styles.container}>
-                <Btn />
+                <Sib />
                 <MyName />
                 <Qualities />
                 <Message />
