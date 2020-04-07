@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Sib.module.css';
 import Button from "./Button/Button";
+import Input from "./Input/Input";
+import Span from "./Span/Span";
 
 
 class Sib extends React.Component {
@@ -18,25 +20,24 @@ class Sib extends React.Component {
     addClickHandler = () => {
         let newText = this.newMessageText.current.value;
         this.newMessageText.current.value = "";
-        this.onChangeText(" Привет " + newText);
+        this.onChangeText(" Привет " + newText); // вызываем нашу функцию onChangeText
         this.setState({startNumber: this.state.startNumber + 1})
     };
 
-onChangeText = (qwe) => {
-    let newMessage = [...this.state.text, qwe];
-    this.setState({text: newMessage})
-}
-
-
+    onChangeText = (qwe) => { // передаем через парметры новое значение для функции
+        let newMessage = [...this.state.text, qwe]; // копируем придущую функцию-массив addClickHandler, а после него всталяет новый парамент значение <qwe>
+        this.setState({text: newMessage}) // заменяем наш объект text на новый объект newMessage
+    }
 
 
     render() {
         return (
             <div className={styles.sib}>
-                <span>{this.state.startNumber}</span>
-                <input ref={this.newMessageText} type="text"/>
-            <Button addClickHandler={this.addClickHandler}/>
-            <p>{this.state.text}</p>
+
+                <Span startNumber={this.startNumber} />
+                <Input newMessageText={this.newMessageText}/>
+                <Button addClickHandler={this.addClickHandler}/>
+                <p>{this.state.text}</p>
 
 
             </div>
@@ -44,4 +45,4 @@ onChangeText = (qwe) => {
     }
 };
 
-export default  Sib;
+export default Sib;
